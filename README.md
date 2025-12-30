@@ -150,7 +150,7 @@
  ┃ ┣ 02_roc_curve.png
  ┃ ┗ 03_feature_importance.png
  ┗ 📜 README.md
-
+```
 
 ---
 
@@ -170,7 +170,7 @@ python final_complete_code.py
 
 # 2️⃣ Streamlit 앱 실행
 streamlit run app.py
-
+```
 ---
 ##💡 프로젝트 차별점
 
