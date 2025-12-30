@@ -171,3 +171,18 @@ python final_complete_code.py
 # 2️⃣ Streamlit 앱 실행
 streamlit run app.py
 
+---
+##💡 프로젝트 차별점
+
+- 예측에 그치지 않고 **해석 가능한 모델 설계**
+- 두 모델(Logistic Regression / Random Forest) 비교를 통한 신뢰성 확보
+- 분석 결과를 **Streamlit 웹 서비스로 구현**
+- 정책·복지 도메인에 바로 적용 가능한 구조
+
+---
+##📎 향후 개선 방향
+
+- 시계열 데이터 확장
+- 외부 데이터(지역 환경, 사회 인프라) 결합
+- SHAP 기반 설명 가능 AI 적용
+
