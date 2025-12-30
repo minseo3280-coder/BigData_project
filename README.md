@@ -151,10 +151,10 @@
  ┃ ┗ 03_feature_importance.png
  ┗ 📜 README.md
 ```
-
 ---
 
 ## ⚙ 실행 방법
+
 ```bash
 # 가상환경 생성
 python -m venv venv
@@ -172,7 +172,7 @@ python final_complete_code.py
 streamlit run app.py
 ```
 ---
-##💡 프로젝트 차별점
+## 💡 프로젝트 차별점
 
 - 예측에 그치지 않고 **해석 가능한 모델 설계**
 - 두 모델(Logistic Regression / Random Forest) 비교를 통한 신뢰성 확보
@@ -180,7 +180,7 @@ streamlit run app.py
 - 정책·복지 도메인에 바로 적용 가능한 구조
 
 ---
-##📎 향후 개선 방향
+## 📎 향후 개선 방향
 
 - 시계열 데이터 확장
 - 외부 데이터(지역 환경, 사회 인프라) 결합
