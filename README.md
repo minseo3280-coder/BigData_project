@@ -1,5 +1,7 @@
+
 # 🎯 청년 고립·은둔 위험군 예측 모델 및 핵심 요인 분석 
 ### 머신러닝 기반 사회적 고립 조기 탐지 시스템
+
 
 > 서울시 실태조사 데이터를 머신러닝으로 분석하여 고위험군을 조기에 탐지하고, 핵심 요인을 규명하는 프로젝트입니다.
 > 
@@ -17,6 +19,29 @@
   
 ## 🎬 서비스 시연 영상
 https://private-user-images.githubusercontent.com/248983211/531126448-4ddea955-a170-46b6-88e4-1d08ede514f1.mp4?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjcxNDEzNzIsIm5iZiI6MTc2NzE0MTA3MiwicGF0aCI6Ii8yNDg5ODMyMTEvNTMxMTI2NDQ4LTRkZGVhOTU1LWExNzAtNDZiNi04OGU0LTFkMDhlZGU1MTRmMS5tcDQ_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMjMxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTIzMVQwMDMxMTJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jYzY0NDgwMmNlMjU4NWIwZGQ2ZDYzZDI5ZTIzM2E1MTk3Mzc2NWVhNWY3YmE5ZDdjZThjNWM3NTk1MDIwNWQyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.fCbzCEzTMdwMIxGpxJUFgdA7nt48lOGX4e8NI-8i_h0
+
+---
+
+## 🛠 기술 스택 (Tech Stack)
+
+### Environment
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+
+### Data & Machine Learning
+![Pandas](https://img.shields.io/badge/Pandas-2C2D72?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+
+### Visualization
+![Matplotlib](https://img.shields.io/badge/Matplotlib-ffffff?style=for-the-badge&logo=Matplotlib&logoColor=black)
+![Seaborn](https://img.shields.io/badge/Seaborn-4458ad?style=for-the-badge&logoColor=white)
+
+### Deployment
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
+
 
 ---
 
@@ -79,28 +104,6 @@ https://private-user-images.githubusercontent.com/248983211/531126448-4ddea955-a
 ---
 
 
-## 🛠 기술 스택 (Tech Stack)
-
-### Environment
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
-
-### Data & Machine Learning
-![Pandas](https://img.shields.io/badge/Pandas-2C2D72?style=for-the-badge&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
-![Scikit-Learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-
-### Visualization
-![Matplotlib](https://img.shields.io/badge/Matplotlib-ffffff?style=for-the-badge&logo=Matplotlib&logoColor=black)
-![Seaborn](https://img.shields.io/badge/Seaborn-4458ad?style=for-the-badge&logoColor=white)
-
-### Deployment
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
-
-
----
 
 ## 🤖 사용 모델
 
