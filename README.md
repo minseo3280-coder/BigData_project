@@ -148,7 +148,7 @@ https://private-user-images.githubusercontent.com/248983211/531126448-4ddea955-a
    - 타인과의 만남 횟수가 '0'에 수렴할수록 고립 위험이 급격히 증가했습니다.
      
   ### 📉 고립군 vs 비고립군의 교류 빈도(A11) 차이
-![A11 Distribution](./figures/04_a11_distribution.jpg)
+![A11 Distribution](isolation-risk-ml-project/figures/04_a11_distribution.jpg)
 > **해석**: 붉은색(고위험군) 그래프는 교류 빈도가 '0'에 극단적으로 몰려있는 반면, 파란색(일반군)은 넓게 분포합니다. 즉, **"만남이 거의 없는 상태"가 고립을 예측하는 가장 강력한 신호**입니다.
 
      
@@ -199,7 +199,7 @@ https://private-user-images.githubusercontent.com/248983211/531126448-4ddea955-a
  ┃ ┣ 02_roc_curve.png
  ┃ ┗ 03_feature_importance.png
  ┃ ┗ 04_a11_distribution.png
- ┗ 📜 Project_Final_Report.pdf    #프로젝트 보고서 파일
+ ┗ 📜 청년고립위험군_AI예측서비스_수행보고서.pdf    #프로젝트 보고서 파일
 ```
 ---
 
