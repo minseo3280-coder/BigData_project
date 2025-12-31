@@ -1,24 +1,9 @@
 # 🎯 청년 고립·은둔 위험군 예측 모델 및 핵심 요인 분석 
 ### 머신러닝 기반 사회적 고립 조기 탐지 시스템
 
-청년의 **인구통계 정보, 생활 습관, 사회적·심리적 상태**를 기반으로  
-**고립·은둔 위험군 여부를 예측**하고, 어떤 요인이 청년을 고립 상태로 내모는지 **정량적으로 분석**하는 머신러닝 프로젝트입니다.
-본 프로젝트는 단순 모델 학습을 넘어, **해석 가능한 분석 결과 + Streamlit 기반 예측 서비스**까지 구현하는 것을 목표로 했습니다.
+> 서울시 실태조사 데이터를 머신러닝으로 분석하여 고위험군을 조기에 탐지하고, 핵심 요인을 규명하는 프로젝트입니다
+> 본 프로젝트는 단순 모델 학습을 넘어, **해석 가능한 분석 결과 + Streamlit 기반 예측 서비스**까지 구현하는 것을 목표로 했습니다.
 
----
-
-## 📌 프로젝트 개요
-
-- **프로젝트명**: 청년 고립·은둔 위험군 예측 모델 및 핵심 요인 분석
-- **개발 목적**:
-  - 고립·은둔 위험 청년 조기 발견
-  - 사회적·개인적 결핍 요인 규명
-- **개발 형태**: 개인 프로젝트
-- **개발 기간**: 2025.01
-- **활용 시나리오**:
-  - 지자체 청년 고립 예방 서비스
-  - 상담·복지 대상자 우선 선별
-  - 고립 위험도 체크리스트 자동화
 
 ---
 
@@ -28,6 +13,24 @@
 👉 **[프로젝트 수행 결과 보고서 보기 (PDF)](isolation-risk-ml-project/Project_Final_Report.pdf.pdf)**
 
 ---
+  
+## 🎬 서비스 시연 영상
+https://private-user-images.githubusercontent.com/248983211/531126448-4ddea955-a170-46b6-88e4-1d08ede514f1.mp4?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjcxNDEzNzIsIm5iZiI6MTc2NzE0MTA3MiwicGF0aCI6Ii8yNDg5ODMyMTEvNTMxMTI2NDQ4LTRkZGVhOTU1LWExNzAtNDZiNi04OGU0LTFkMDhlZGU1MTRmMS5tcDQ_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMjMxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTIzMVQwMDMxMTJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jYzY0NDgwMmNlMjU4NWIwZGQ2ZDYzZDI5ZTIzM2E1MTk3Mzc2NWVhNWY3YmE5ZDdjZThjNWM3NTk1MDIwNWQyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.fCbzCEzTMdwMIxGpxJUFgdA7nt48lOGX4e8NI-8i_h0
+
+---
+
+
+## 📌 프로젝트 개요
+
+- **목적**: 청년 고립·은둔 위험군(High-Risk Group)을 조기에 발굴하고, 맞춤형 지원을 위한 의사결정 지원 시스템(DSS) 구축
+- **데이터**: 서울시 고립·은둔 청년 실태조사 데이터 (5,513명)
+- **핵심 기능**:
+  1. **개인 위험도 진단**: 6개 핵심 질문으로 실시간 위험 확률 예측
+  2. **요인 분석**: 고립에 영향을 미치는 사회·경제적 요인 시각화
+  3. **모델 비교**: 해석력(Logistic Regression) vs 성능(Random Forest) 비교 분석
+
+---
+
 
 ## 📢 문제 정의
 
@@ -48,6 +51,7 @@
 - **데이터 유형**: 설문 기반 정형 데이터
 - **분석 단위**: 개인(청년)
 
+
 ### 주요 사용 변수 예시
 | 구분 | 변수 설명 |
 |---|---|
@@ -57,6 +61,19 @@
 | 생활 습관 | 식사 빈도 |
 | 사회적 교류 | 최근 사회적 교류 횟수 |
 | 주관적 인식 | 사회경제 수준 |
+
+---
+
+## 📊 데이터 및 전처리 (Data Pipeline)
+
+전체 데이터 중 고립·은둔 청년은 **8.8%**로, 심각한 **클래스 불균형(Imbalance)** 문제가 있었습니다. 이를 해결하기 위해 정교한 전처리를 수행했습니다.
+
+| 단계 | 주요 내용 | 비고 |
+|---|---|---|
+| **데이터 정제** | 결측치 처리 (수치형: 중앙값, 범주형: 최빈값) | 이상치 영향 최소화 |
+| **특성 공학** | 명목형 변수(직업 등) **원-핫 인코딩(One-Hot Encoding)** | 순서 왜곡 방지 |
+| **스케일링** | **StandardScaler** 적용 | 데이터 누수 방지를 위해 Train set 기준으로만 fit |
+| **불균형 처리** | **Class Weight ('balanced')** 적용 | 소수 클래스(위험군) 가중치 부여 |
 
 ---
 
@@ -97,23 +114,31 @@
 
 ---
 
-## 📈 모델 성능 비교
+## 🤖 모델링 및 성과 (Modeling & Performance)
 
-| Model | Accuracy | ROC-AUC |
-|---|---|---|
-| Logistic Regression | xx.xx | xx.xx |
-| Random Forest | **xx.xx** | **xx.xx** |
+**"정확도(Accuracy)보다 고위험군을 놓치지 않는 재현율(Recall)과 F1-Score에 집중했습니다."**
+
+최종적으로 **Random Forest (F1 Optimized)** 모델을 선정했습니다.
+
+| 모델 | ROC-AUC | F1-Score | 특징 |
+|---|---|---|---|
+| **Random Forest (Best)** 🏆 | **0.873** | **0.523** | 비선형 패턴 학습, 가장 균형 잡힌 성능 |
+| Logistic Regression | 0.846 | 0.379 | 오탐(False Positive)이 많으나 해석력 우수 |
+
+- **최적화**: GridSearchCV를 통해 `n_estimators=150`, `max_depth=20` 등 최적 파라미터 도출
+- **성과**: ROC-AUC 0.873 달성으로 우수한 분류 성능 입증
 
 ---
+## 💡 핵심 분석 결과 (Key Findings)
 
-## 📊 결과 시각화
+머신러닝 분석 결과, 고립·은둔은 단순한 성격 문제가 아닌 **구조적 결핍**에서 비롯됨을 확인했습니다.
 
-- Confusion Matrix
-- ROC Curve (모델 성능 비교)
-- Random Forest Feature Importance
-- Logistic Regression Coefficient 분석
-
-이를 통해 **고립·은둔 위험에 영향을 미치는 핵심 요인**을 도출하였습니다.
+1. **가장 강력한 신호 = 교류 빈도 (A11)**
+   - 타인과의 만남 횟수가 '0'에 수렴할수록 고립 위험이 급격히 증가했습니다.
+2. **경제적 요인의 중요성 (A6, A1)**
+   - 주관적 경제 수준(A6)과 노동 여부(A1)가 상위 중요도 변수로 나타났습니다.
+3. **직관적 해석**
+   - 모델의 Feature Importance 분석 결과, **[교류 빈도 + 경제 수준 + 노동 여부]** 3가지 변수가 전체 예측력의 **약 42%**를 설명합니다.
 
 ---
 
@@ -194,7 +219,4 @@ streamlit run app.py
 - 지역 환경·사회 인프라 데이터 결합
 - SHAP 기반 설명 가능 AI 적용
 
-  ---
-  
-## 🎬 서비스 시연 영상
-https://private-user-images.githubusercontent.com/248983211/531126448-4ddea955-a170-46b6-88e4-1d08ede514f1.mp4?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjcxNDEzNzIsIm5iZiI6MTc2NzE0MTA3MiwicGF0aCI6Ii8yNDg5ODMyMTEvNTMxMTI2NDQ4LTRkZGVhOTU1LWExNzAtNDZiNi04OGU0LTFkMDhlZGU1MTRmMS5tcDQ_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMjMxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTIzMVQwMDMxMTJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jYzY0NDgwMmNlMjU4NWIwZGQ2ZDYzZDI5ZTIzM2E1MTk3Mzc2NWVhNWY3YmE5ZDdjZThjNWM3NTk1MDIwNWQyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.fCbzCEzTMdwMIxGpxJUFgdA7nt48lOGX4e8NI-8i_h0
+
