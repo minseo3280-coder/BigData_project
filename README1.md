@@ -20,6 +20,19 @@
 
 ---
 
+
+## 🎬 서비스 시연 영상
+[https://github.com/minseo3280-coder/Flask_project/issues/1#issue-3769423576](https://private-user-images.githubusercontent.com/248983211/530920997-0e13a852-d974-45ea-abad-3a617695d5e6.mp4?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjcwODI4MDMsIm5iZiI6MTc2NzA4MjUwMywicGF0aCI6Ii8yNDg5ODMyMTEvNTMwOTIwOTk3LTBlMTNhODUyLWQ5NzQtNDVlYS1hYmFkLTNhNjE3Njk1ZDVlNi5tcDQ_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMjMwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTIzMFQwODE1MDNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT00ZDkxMGE2YmM4NmU0MWZmMzZmYWMzNTg2ZDA2NjMyMTk3Yzg1NDFkOTYwYWZmMTA3MTQ2YzI0OWQyZDFkYWM1JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.fmQvu3c2Wfi_NjkMx8U17vH5XcRf8c_CLJOuFKA-D6g)**
+
+---
+
+## 📊 프로젝트 발표 자료
+
+💛 **[Google Slides 발표 자료](https://docs.google.com/presentation/d/e/2PACX-1vTkiAo32hMr4zrigNEaB6z2tsfOwmbTQcUz23JqTGH18wYwzV1yfw0ZCI4Hw8V8hw/pubembed?start=false&loop=false&delayms=3000)**
+
+---
+
+
 ## 🛠️ 기술 스택 (Tech Stack)
 
 ### **Backend**
@@ -682,36 +695,36 @@ function updateFacilities(rest) {
 ```
 ┌─────────────────────────────────────────────────┐
 │   🛣️ Highway Gourmet Road                       │
-│   맛있는 휴식이 있는 여정을 큐레이션합니다        │
-├─────────────────────────────────────────────────┤
-│                                                   │
-│  [출발지 입력 ▼]  [도착지 입력 ▼]  [🔍 검색]     │
-│                                                   │
-├─────────────────────────────────────────────────┤
-│                                                   │
+│   맛있는 휴식이 있는 여정을 큐레이션합니다          │
+├──────────────────────────────────────────────────┤
+│                                                  │
+│  [출발지 입력 ▼]  [도착지 입력 ▼]  [🔍 검색]       │
+│                                                  │
+├──────────────────────────────────────────────────┤
+│                                                  │
 │                  [카카오맵 지도]                  │
-│                                                   │
+│                                                  │
 │  - 경로선 (파란색 Polyline)                       │
-│  - 휴게소 마커 (클릭 시 정보)                     │
-│                                                   │
-├─────────────────────────────────────────────────┤
-│  총 거리: 325 km | 예상 시간: 3시간 20분         │
-├─────────────────────────────────────────────────┤
-│  📍 휴게소 목록 (타임라인)                        │
-│                                                   │
-│  🔴 서울휴게소                                    │
-│     우육면 | ⛽ 주유소 | 💊 약국 | 🤱 수유실     │
-│                                                   │
-│  🔵 이천휴게소                                    │
-│     계란말이 | 🔌 전기차 | 💊 약국               │
-│                                                   │
-│  🔵 대전휴게소                                    │
+│  - 휴게소 마커 (클릭 시 정보)                      │
+│                                                  │
+├──────────────────────────────────────────────────┤
+│  총 거리: 325 km | 예상 시간: 3시간 20분           │
+├──────────────────────────────────────────────────┤
+│  📍 휴게소 목록 (타임라인)                         │
+│                                                  │
+│  🔴 서울휴게소                                   │
+│     우육면 | ⛽ 주유소 | 💊 약국 | 🤱 수유실      │
+│                                                  │
+│  🔵 이천휴게소                                   │
+│     계란말이 | 🔌 전기차 | 💊 약국                │
+│                                                  │
+│  🔵 대전휴게소                                   │
 │     국밥 | ⛽ 주유소                              │
-│                                                   │
-│  🟢 부산휴게소                                    │
+│                                                  │
+│  🟢 부산휴게소                                   │
 │     밀면 | 💊 약국 | 🤱 수유실                   │
-│                                                   │
-└─────────────────────────────────────────────────┘
+│                                                  │
+└──────────────────────────────────────────────────┘
 ```
 
 ### 휴게소 상세 정보 모달
@@ -722,18 +735,18 @@ function updateFacilities(rest) {
 │                                  │
 │  📍 서울휴게소                    │
 │  📞 02-123-4567                 │
-│                                  │
+│                                 │
 │  🍽️ 대표 메뉴: 우육면            │
-│                                  │
-│  ⭐ AI 메뉴 추천:                │
-│                                  │
+│                                 │
+│  ⭐ AI 메뉴 추천:               │
+│                                 │
 │  1. 우육면 - 부드러운 소고기...   │
 │  2. 계란말이 - 한식 반찬...      │
-│                                  │
-│  ✨ 편의시설:                     │
+│                                 │
+│  ✨ 편의시설:                   │
 │  [⛽] [💊] [🤱] [ 🔌 ]         │
 │   주유소 약국 수유실  전기차      │
-│                                  │
+│                                 │
 │  [🔗 카카오맵 위치 보기]         │
 │  [✕ 닫기]                       │
 └──────────────────────────────────┘
@@ -929,19 +942,7 @@ docker run -p 8000:8000 \
 
 ---
 
-## 🎬 서비스 시연 영상
 
-프로젝트의 실제 동작을 확인하려면 아래 영상을 참고하세요:
-
-📹 **[Highway Gourmet Road 시연 영상](https://private-user-images.githubusercontent.com/248983211/530920997-0e13a852-d974-45ea-abad-3a617695d5e6.mp4)**
-
----
-
-## 📊 프로젝트 발표 자료
-
-💛 **[Google Slides 발표 자료](https://docs.google.com/presentation/d/e/2PACX-1vTkiAo32hMr4zrigNEaB6z2tsfOwmbTQcUz23JqTGH18wYwzV1yfw0ZCI4Hw8V8hw/pubembed?start=false&loop=false&delayms=3000)**
-
----
 
 ## 💡 프로젝트 차별점
 
@@ -980,7 +981,7 @@ docker run -p 8000:8000 \
 
 | 역할 | 담당자 | 책임 |
 |------|--------|------|
-| **PL (Project Leader)** | 민서 | 기술 아키텍처, 백엔드 핵심 로직 |
+| **PL (Project Leader)** | 신민서 | 기술 아키텍처, 백엔드 핵심 로직 |
 | **Backend Developer** | 팀원 | Flask API, 데이터베이스 연동 |
 | **Frontend Developer** | 팀원 | HTML/CSS/JS, UI/UX 구현 |
 | **Database Engineer** | 팀원 | MariaDB 설계, 쿼리 최적화 |
@@ -1024,7 +1025,7 @@ git push origin feature/your-feature
 
 - **GitHub**: [@minseo3280-coder](https://github.com/minseo3280-coder)
 - **프로젝트 저장소**: [Flask_project](https://github.com/minseo3280-coder/Flask_project)
-- **이메일**: contact@example.com
+- **이메일**: minseo3280@gmail.com
 
 ---
 
