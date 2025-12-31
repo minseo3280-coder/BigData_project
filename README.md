@@ -25,7 +25,7 @@
 ## 📄 상세 보고서 (Technical Report)
 프로젝트의 기획 배경, 데이터 전처리 과정, 상세한 모델 성능 분석 내용은 아래 PDF 보고서에서 확인하실 수 있습니다.
 
-👉 **[프로젝트 수행 결과 보고서 보기 (PDF)](./Project_Final_Report.pdf)**
+👉 **[프로젝트 수행 결과 보고서 보기 (PDF)](isolation-risk-ml-project/Project_Final_Report.pdf.pdf)**
 
 ---
 
