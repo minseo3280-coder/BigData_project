@@ -989,20 +989,7 @@ docker run -p 8000:8000 \
 
 ---
 
-## 📄 라이선스
 
-이 프로젝트는 **MIT 라이선스** 하에 배포됩니다.
-
----
-
-## 🤝 기여 및 피드백
-
-버그 리포트, 기능 제안, Pull Request를 환영합니다!
-
-### 이슈 제출
-```
-GitHub Issues: https://github.com/minseo3280-coder/Flask_project/issues
-```
 
 ### Pull Request
 ```bash
