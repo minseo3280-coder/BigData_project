@@ -1,239 +1,277 @@
+# 🎯 청년 고립·은둔 위험군 예측 AI 서비스
 
-# 🎯 청년 고립·은둔 위험군 예측 및 의사결정 지원 웹 서비스
+> 서울시 실태조사 데이터(5,513명)를 머신러닝으로 분석하여 고위험군을 조기에 발굴하고,
+> **"왜 고립에 빠지는가?"**에 대한 구조적 원인을 규명하는 데이터 과학 프로젝트입니다.
 
-> 서울시 실태조사 데이터를 머신러닝으로 분석하여 고위험군을 조기에 탐지하고, 핵심 요인을 규명하는 프로젝트입니다.
-> 
-> 본 프로젝트는 단순 모델 학습을 넘어, **해석 가능한 분석 결과 + Streamlit 기반 예측 서비스**까지 구현하는 것을 목표로 했습니다.
-
-
----
-
-## 📄 상세 프로젝트 수행 보고서
-본 프로젝트의 기획 의도, 전처리 과정, 모델링 상세 결과는 아래 PDF에서 확인하실 수 있습니다.
-
-
-👉 **[청년고립위험군_AI예측서비스_수행보고서.pdf](isolation-risk-ml-project/청년고립위험군_AI예측서비스_수행보고서.pdf)**
-
----
-  
-## 🎬 서비스 시연 영상
-https://private-user-images.githubusercontent.com/248983211/531126448-4ddea955-a170-46b6-88e4-1d08ede514f1.mp4?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjcxNDEzNzIsIm5iZiI6MTc2NzE0MTA3MiwicGF0aCI6Ii8yNDg5ODMyMTEvNTMxMTI2NDQ4LTRkZGVhOTU1LWExNzAtNDZiNi04OGU0LTFkMDhlZGU1MTRmMS5tcDQ_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMjMxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTIzMVQwMDMxMTJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jYzY0NDgwMmNlMjU4NWIwZGQ2ZDYzZDI5ZTIzM2E1MTk3Mzc2NWVhNWY3YmE5ZDdjZThjNWM3NTk1MDIwNWQyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.fCbzCEzTMdwMIxGpxJUFgdA7nt48lOGX4e8NI-8i_h0
+**🏆 성과**: Random Forest 모델 ROC-AUC **0.873**, F1-Score **0.523** 달성  
+**🎯 실무 활용**: Streamlit 웹 서비스로 상담가의 의사결정 지원 시스템 구현
 
 ---
 
-## 🛠 기술 스택 (Tech Stack)
+## 📄 프로젝트 보고서
 
-### Environment
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+상세 기획, 분석, 개발 과정은 다음 보고서에서 확인하세요:
 
-### Data & Machine Learning
-![Pandas](https://img.shields.io/badge/Pandas-2C2D72?style=for-the-badge&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
-![Scikit-Learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-
-### Visualization
-![Matplotlib](https://img.shields.io/badge/Matplotlib-ffffff?style=for-the-badge&logo=Matplotlib&logoColor=black)
-![Seaborn](https://img.shields.io/badge/Seaborn-4458ad?style=for-the-badge&logoColor=white)
-
-### Deployment
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
-
+👉 **[청년고립위험군_AI예측서비스_수행보고서.pdf](./청년고립위험군_AI예측서비스_수행보고서.pdf)**
 
 ---
 
+## 🛠 기술 스택
 
-## 📌 프로젝트 개요
-
-- **목적**: 청년 고립·은둔 위험군(High-Risk Group)을 조기에 발굴하고, 맞춤형 지원을 위한 의사결정 지원 시스템(DSS) 구축
-- **데이터**: 서울시 고립·은둔 청년 실태조사 데이터 (5,513명)
-- **핵심 기능**:
-  1. **개인 위험도 진단**: 7개 핵심 질문으로 실시간 위험 확률 예측
-  2. **요인 분석**: 고립에 영향을 미치는 사회·경제적 요인 시각화
-  3. **모델 비교**: 해석력(Logistic Regression) vs 성능(Random Forest) 비교 분석
+- **Python 3.9+** | **Pandas** | **NumPy** | **Scikit-Learn**
+- **Streamlit** (웹 애플리케이션)
+- **Matplotlib, Seaborn** (데이터 시각화)
+- **GridSearchCV** (하이퍼파라미터 최적화)
 
 ---
 
+## 📌 문제 정의
 
-## 📢 문제 정의
-
-- **문제 유형**: 이진 분류 (Binary Classification)
-- **Target 변수**:
-  - `1`: 고립·은둔 위험군
-  - `0`: 일반군
+### 현황
+- **위험 요인**: 1인가구 증가, 고용 부진, 사회적 단절
+- **규모**: '일자리 밖' 청년 160만 명 / 고립·은둔 청년 8.8% (486명)
+- **목표**: 조기 발굴 및 맞춤형 지원 정책 근거 마련
 
 ### 핵심 질문
-> “어떤 사회적·개인적 결핍이  
-> 청년을 고립·은둔 상태로 이끄는 가장 강력한 신호인가?”
+> **"어떤 사회적·개인적 결핍이 청년을 고립·은둔 상태로 이끌까?"**
 
 ---
 
-## 📊 데이터 설명
+## 📊 데이터 분석
 
-- **데이터 출처**: 서울시 고립·은둔 청년 실태조사 (청년조사) [ https://data.seoul.go.kr/dataList/OA-22347/F/1/datasetView.do]
-- **데이터 유형**: 설문 기반 정형 데이터
-- **분석 단위**: 개인(청년)
+### 데이터 개요
+- **출처**: [서울시 공공데이터포털 - 청년 고립·은둔 실태조사](https://data.seoul.go.kr/dataList/OA-22347/F/1/datasetView.do)
+- **표본**: 5,513명 (서울 거주 19~39세 청년)
+- **클래스 분포**: 
+  - 저위험군 (0): 5,027명 (91.2%)
+  - 고위험군 (1): 486명 (8.8%) ← **심각한 불균형**
 
+### 전처리 전략
 
-### 주요 사용 변수 예시
-| 순위 | 변수명 | 중요도 | 해석 |
-|:---:|:---|:---:|:---|
-| 1️⃣ | **A11 (교류 빈도)** | **0.155** | 타인과의 만남 횟수 ↓ → 고립 위험 ↑ |
-| 2️⃣ | **A6 (사회경제 수준)** | **0.145** | 주관적 경제 수준 ↓ → 고립 위험 ↑ |
-| 3️⃣ | **A1_3 (노동 여부: 미취업)** | **0.119** | 지난주 일하지 않음 → 사회적 단절 위험 |
-| 4️⃣ | **DQ2_10.0 (직업: 무직)** | 0.069 | 현재 아무런 일을 하지 않음 → 고립 위험 ↑ |
-| 5️⃣ | A5 (식사 횟수) | 0.063 | 식사 횟수 ↓ (불규칙한 생활) → 고립 위험 ↑ |
-| 6️⃣ | **SQ6_R (동거 가구원 수)** | 0.041 | **1인 가구(나홀로) 또는 가족 내 고립 → 위험 ↑** |
-| 7️⃣ | SQ2_X (나이) | 0.034 | 특정 연령대(취업준비생 등) → 고립 취약 |
-| 8️⃣ | **DQ3_2.0 (혼인 상태: 미혼)** | 0.032 | **미혼 상태(가족 형성 부재) → 정서적 지지 ↓** |
-| 9️⃣ | **A4_1 (소득원: 본인 소득)** | 0.030 | **본인 소득 의존도가 높으나 불안정 → 경제적 고립** |
-| 🔟 | **DQ5_4 (주거: 아파트)** | 0.021 | **폐쇄적 주거 환경(아파트 등) → 이웃 교류 ↓** |
+```
+결측치 처리
+├─ 수치형: 중앙값(Median) 대체
+├─ 범주형: 최빈값(Mode) 대체
+└─ 다중선택: 0/1 그대로 사용
 
+변수 인코딩 & 스케일링
+├─ One-Hot Encoding (명목형 변수: 직업, 혼인상태 등)
+├─ Label Encoding (서수형 변수: 경제수준, 교류빈도)
+└─ StandardScaler (학습/테스트 분리 적용)
 
----
+불균형 처리
+├─ Class Weight 'balanced' 적용
+└─ F1-Score 중심 평가 (Precision-Recall 최적화)
 
-## 📊 데이터 및 전처리 (Data Pipeline)
-전체 데이터 중 고립·은둔 청년은 **8.8%**로, 심각한 **클래스 불균형(Imbalance)** 문제가 있었습니다. 이를 해결하기 위해 정교한 전처리를 수행했습니다.
-
-| 단계 | 주요 내용 | 비고 |
-|---|---|---|
-| **데이터 정제** | 결측치 처리 (수치형: 중앙값, 범주형: 최빈값) | 이상치 영향 최소화 |
-| **특성 공학** | 명목형 변수(직업 등) **원-핫 인코딩(One-Hot Encoding)** | 순서 왜곡 방지 |
-| **스케일링** | **StandardScaler** 적용 | 데이터 누수 방지를 위해 Train set 기준으로만 fit |
-| **불균형 처리** | **Class Weight ('balanced')** 적용 | 소수 클래스(위험군) 가중치 부여 |
+결과: 44개 변수로 확장 (결측치 0개)
+```
 
 ---
 
+## 🤖 모델 성능 비교
 
+### 최종 결과 (테스트 데이터: 1,103명 기준)
 
-## 🤖 사용 모델
+| 모델 | Accuracy | ROC-AUC | Precision | Recall | F1-Score | 선택 |
+|------|----------|---------|-----------|--------|----------|------|
+| **Logistic Regression** | 0.786 | 0.846 | 0.254 | 0.742 | 0.379 | 해석용 |
+| **Random Forest (Basic)** | 0.928 | 0.855 | 0.765 | 0.268 | 0.397 | - |
+| **🏆 Random Forest (F1 Optimized)** | 0.904 | **0.873** | 0.464 | **0.598** | **0.523** | **최종** |
 
-### 1️⃣ Logistic Regression
-- 이진 분류에 적합한 기본 모델
-- 각 변수의 영향 방향(위험 증가/감소) 해석 가능
-- 정책·서비스 설명을 위한 해석 중심 모델
+### 선택 근거
+✅ **ROC-AUC 0.873** (가장 높음)  
+✅ **F1-Score 0.523** (Precision-Recall 최적 균형)  
+✅ **오탐 감소**: 211명 → 67명 (약 65% 감소)  
+✅ **고위험군 탐지율**: Recall 60% (위험군 놓치지 않음)  
+✅ **하이퍼파라미터 튜닝**: GridSearchCV 5-Fold CV로 최적화
 
-### 2️⃣ Random Forest
-- 비선형 관계 및 변수 간 상호작용 학습
-- 높은 예측 성능
-- 최종 예측 서비스에 사용한 모델
-
-> 본 프로젝트에서는 **Random Forest를 최종 서비스 모델로 채택**하고,  
-> Logistic Regression은 **해석 및 요인 분석용 모델**로 병행 활용했습니다.
-
----
-
-## 🤖 모델링 및 성과 (Modeling & Performance)
-
-**"정확도(Accuracy)보다 고위험군을 놓치지 않는 재현율(Recall)과 F1-Score에 집중했습니다."**
-
-최종적으로 **Random Forest (F1 Optimized)** 모델을 선정했습니다.
-
-| 모델 | ROC-AUC | F1-Score | 특징 |
-|---|---|---|---|
-| **Random Forest (Best)** 🏆 | **0.873** | **0.523** | 비선형 패턴 학습, 가장 균형 잡힌 성능 |
-| Logistic Regression | 0.846 | 0.379 | 오탐(False Positive)이 많으나 해석력 우수 |
-
-- **최적화**: GridSearchCV를 통해 `n_estimators=150`, `max_depth=20` 등 최적 파라미터 도출
-- **성과**: ROC-AUC 0.873 달성으로 우수한 분류 성능 입증
+**최적 파라미터**: `n_estimators=150`, `max_depth=20`, `min_samples_split=10`, `min_samples_leaf=2`
 
 ---
-## 💡 핵심 분석 결과 (Key Findings)
 
-머신러닝 분석 결과, 고립·은둔은 단순한 성격 문제가 아닌 **구조적 결핍**에서 비롯됨을 확인했습니다.
+## 💡 핵심 발견 (Feature Importance)
 
-1. **가장 강력한 신호 = 교류 빈도 (A11)**
-   - 타인과의 만남 횟수가 '0'에 수렴할수록 고립 위험이 급격히 증가했습니다.
-     
-   -  📉 고립군 vs 비고립군의 교류 빈도(A11) 차이
-![A11 Distribution](isolation-risk-ml-project/figures/04_a11_distribution.png)
-> **해석**: 붉은색(고위험군) 그래프는 교류 빈도가 '0'에 극단적으로 몰려있는 반면, 파란색(일반군)은 넓게 분포합니다. 즉, **"만남이 거의 없는 상태"가 고립을 예측하는 가장 강력한 신호**입니다.
+### 🔝 Top 10 영향 요인
 
-     
-2. **경제적 요인의 중요성 (A6, A1)**
-   - 주관적 경제 수준(A6)과 노동 여부(A1)가 상위 중요도 변수로 나타났습니다.
-3. **직관적 해석**
-   - 모델의 Feature Importance 분석 결과, **[교류 빈도 + 경제 수준 + 노동 여부]** 3가지 변수가 전체 예측력의 **약 42%**를 설명합니다.
+| 순위 | 변수 | 중요도 | 해석 |
+|:---:|:-----|:---:|:---|
+| **1️⃣** | **A11 (교류 빈도)** | **0.155** | 타인과의 만남 ↓ = 고립 위험 ↑ |
+| **2️⃣** | **A6 (사회경제 수준)** | **0.145** | 경제 수준 ↓ = 고립 위험 ↑ |
+| **3️⃣** | **A1_3 (미취업)** | **0.119** | 노동 없음 = 사회적 단절 위험 |
+| 4️⃣ | DQ2_10.0 (무직) | 0.069 | 현재 일 없음 |
+| 5️⃣ | A5 (식사 횟수) | 0.063 | 불규칙한 생활 패턴 |
+| 6️⃣ | SQ6_R (동거 인원) | 0.041 | 1인 가구 / 가족 내 고립 |
+| 7️⃣ | SQ2_X (나이) | 0.034 | 특정 연령대 취약 |
+| 8️⃣ | DQ3_2.0 (미혼) | 0.032 | 가족 형성 부재 |
+| 9️⃣ | A4_1 (본인 소득) | 0.030 | 경제적 불안정 |
+| 🔟 | DQ5_4 (아파트) | 0.021 | 폐쇄적 주거 환경 |
+
+### 📊 데이터 기반 통찰
+
+**⚠️ 고립·은둔은 성격 문제가 아닌 구조적 결핍**
+
+```
+상위 3개 변수 = 전체 예측력의 약 42% 설명
+
+┌─────────────────────────────────────────┐
+│ 1. A11 (교류 빈도): 거의 만나지 않음   │
+│ 2. A6 (경제 수준): 경제적 어려움       │
+│ 3. A1 (노동 여부): 일자리 부재          │
+│                                         │
+│ → 경제·사회적 환경이 고립을 유발       │
+└─────────────────────────────────────────┘
+```
+
+**특히 주목할 점**:
+- **A11 분포**: 고위험군은 0에 극도로 집중 (거의 만남 없음)
+- **경제 요인**: A6(경제수준) + A1(노동) = 구조적 기반
+- **관계망 부재**: SQ6_R(독거) + DQ3(미혼) = 정서적 안전망 부족
 
 ---
 
 ## 🔮 Streamlit 예측 서비스
 
-### 주요 기능
-- 사용자 입력 기반 **실시간 고립·은둔 위험도 예측**
-- Random Forest & Logistic Regression 확률 비교
-- 주요 위험 요인 시각화
-- 비개발자도 활용 가능한 웹 UI
+### 시스템 개요
 
-### 입력 항목
-- 연령대
-- 노동 여부
-- 직업 상태
-- 사회적 교류 횟수
-- 식사 빈도
-- 사회경제 수준
-- 동거 인원 수
+✅ **실시간 위험도 진단**: 7가지 핵심 질문으로 개별 위험 확률 계산  
+✅ **모델 비교 분석**: Random Forest & Logistic Regression 결과 비교  
+✅ **시각화 대시보드**: ROC 곡선, 혼동행렬, Feature Importance  
+✅ **사용자 친화적**: 비개발자도 상담 현장에서 즉시 활용 가능
+
+### 입력 항목 (7가지 핵심 변수)
+
+| # | 변수 | 설명 | 입력 방식 |
+|:--|:-----|:---|:--------|
+| 1 | **A11** | 교류 빈도 (타인과 만남 횟수) | 슬라이더 |
+| 2 | **A6** | 사회경제 수준 (주관적 의식) | 셀렉트박스 |
+| 3 | **A1** | 노동 여부 (지난주 경제활동) | 셀렉트박스 |
+| 4 | **DQ2** | 직업 상태 (현재 고용 형태) | 셀렉트박스 |
+| 5 | **A5** | 식사 횟수 (일 평균 끼니 수) | 셀렉트박스 |
+| 6 | **SQ6_R** | 동거 인원 (가구원 수) | 슬라이더 |
+| 7 | **SQ2_X** | 나이 (청년 구간) | 라디오버튼 |
+
+### 예측 프로세스
+```
+1️⃣ 사용자 입력 (7개 핵심 변수)
+   ↓
+2️⃣ 데이터 보정 (나머지 37개 변수는 전체 데이터셋 대표값으로 자동 채움)
+   ↓
+3️⃣ AI 모델 추론 (44개 전체 변수로 학습된 Random Forest 모델)
+   ↓
+4️⃣ 위험도 산출 (0~100% 확률 + 고/중/저 등급 판정)
+   ↓
+5️⃣ 맞춤형 피드백 (위험 등급별 지원 정책 안내)
+```
 
 ---
 
 ## 📂 프로젝트 구조
 
-```bash
-📦 isolation-risk-ml-project
- ┣ 📜 final_complete_code.py      # 데이터 전처리 및 모델 학습 코드
- ┣ 📜 app.py                      # Streamlit 웹 애플리케이션 코드
- ┣ 📜 requirements.txt
- ┣ 📂 models                      # 학습된 모델 파일 (.pkl)
- ┃ ┣ random_forest_best_model.pkl
- ┃ ┣ logistic_regression_model.pkl
- ┃ ┣ standard_scaler.pkl
- ┃ ┗ feature_names.pkl
- ┣ 📂 results                     # 분석 결과 데이터 (.csv)
- ┃ ┣ 01_model_comparison_results.csv
- ┃ ┣ 02_feature_importance.csv
- ┃ ┗ 03_logistic_coefficients.csv
- ┣ 📂 figures                     # 분석 결과 시각화 이미지 (ROC, Confusion Matrix 등)
- ┃ ┣ 01_confusion_matrix.png
- ┃ ┣ 02_roc_curve.png
- ┃ ┗ 03_feature_importance.png
- ┃ ┗ 04_a11_distribution.png
- ┗ 📜 청년고립위험군_AI예측서비스_수행보고서.pdf    #프로젝트 보고서 파일
 ```
+🎯 BigData_project
+ ├─ 📄 README.md
+ ├─ 📜 final_complete_code.py          # 데이터 전처리 & 모델 학습
+ ├─ 📜 app.py                           # Streamlit 애플리케이션
+ ├─ 📜 requirements.txt
+ ├─ 📜 청년고립위험군_AI예측서비스_수행보고서.pdf
+ ├─ 📁 models/
+ │  ├─ 🏆 random_forest_best_model.pkl
+ │  ├─ logistic_regression_model.pkl
+ │  ├─ standard_scaler.pkl
+ │  └─ feature_names.pkl
+ ├─ 📁 results/
+ │  ├─ 01_model_comparison_results.csv
+ │  ├─ 02_feature_importance.csv
+ │  └─ 03_logistic_coefficients.csv
+ └─ 📁 figures/
+    ├─ 01_confusion_matrix.png
+    ├─ 02_roc_curve.png
+    ├─ 03_feature_importance.png
+    └─ 04_a11_distribution.png
+```
+
 ---
 
-## ⚙ 실행 방법
+## ⚙️ 실행 방법
+
+### 설치 및 실행
 
 ```bash
-# 가상환경 생성
+# 1️⃣ 저장소 클론
+git clone https://github.com/minseo3280-coder/BigData_project.git
+cd BigData_project
+
+# 2️⃣ 가상환경 생성 및 활성화
 python -m venv venv
+venv\Scripts\activate              # Windows
+# source venv/bin/activate         # Mac/Linux
 
-# 가상환경 활성화 (Windows)
-venv\Scripts\activate
-
-# 패키지 설치
+# 3️⃣ 패키지 설치
 pip install -r requirements.txt
 
-# 1️⃣ 모델 학습 및 결과 생성
+# 4️⃣ (선택) 모델 학습 및 결과 생성
 python final_complete_code.py
 
-# 2️⃣ Streamlit 앱 실행
+# 5️⃣ 🌟 Streamlit 웹 서비스 실행
 streamlit run app.py
 ```
----
-## 💡 프로젝트 차별점
 
-- 예측에 그치지 않고 **해석 가능한 모델 설계**
-- 두 모델(Logistic Regression / Random Forest) 비교를 통한 신뢰성 확보
-- 분석 결과를 **Streamlit 웹 서비스로 구현**
-- 정책·복지 도메인에 바로 적용 가능한 구조
+✅ **확인**: 브라우저에서 `http://localhost:8501` 자동 실행
 
 ---
-## 📎 향후 개선 방향
 
-- 시계열 데이터 통합
-- 지역 환경·사회 인프라 데이터 결합
-- SHAP 기반 설명 가능 AI 적용
+## 🏆 프로젝트 차별점
 
+| 특징 | 설명 |
+|------|------|
+| **🔍 해석 가능한 분석** | Logistic Regression + Random Forest 병행으로 "왜?"에 대한 설명력 확보 |
+| **📊 불균형 데이터 최적화** | 8.8% 소수 클래스를 효과적으로 학습하는 Class Weight + F1 최적화 |
+| **🎯 실무 중심 설계** | 상담가의 의사결정 지원(DSS)을 위한 웹 서비스 직접 구현 |
+| **📈 정량적 성과** | ROC-AUC 0.873, 오탐 65% 감소, Recall 60% 달성 |
+| **🔓 투명한 개발** | GitHub + 상세 보고서로 전체 과정 공개 |
 
+---
+
+## 📈 향후 개선 방향
+
+### 1️⃣ 모델 고도화
+- **Stacking 앙상블**: XGBoost, LightGBM 결합
+- **딥러닝 확장**: NLP 기반 상담 텍스트 분석
+- **XAI 강화**: SHAP 기반 개인별 위험 요인 해석
+
+### 2️⃣ 서비스 확장
+- **모바일 앱**: 청년 자가진단(Self-Check) 도구
+- **시스템 연동**: 보건복지부 상담 시스템 API 연동
+- **MLOps 구축**: 사용자 피드백 기반 자동 모델 재학습
+
+### 3️⃣ 데이터 확장
+- **시계열 분석**: 위험도 변화 추적
+- **지역 데이터**: 인프라·문화시설 정보 통합
+- **전국 확대**: 타 지역 청년 데이터 수집 및 적용
+
+---
+
+## 👨‍💼 프로젝트 담당자
+
+**신민서 (Minuseo Shin)**  
+🔗 [GitHub 프로필](https://github.com/minseo3280-coder)  
+📅 완료 일자: 2025년 12월 30일
+
+---
+
+## 📝 라이선스 및 주의사항
+
+본 프로젝트는 **교육 목적**의 개인 프로젝트입니다.  
+상업적 이용 시 협의가 필요합니다.
+
+---
+
+## 🙏 감사의 말
+
+- **데이터**: 서울시 공공데이터포털 (청년 고립·은둔 실태조사)
+- **기술**: Pandas, Scikit-Learn, Streamlit 등 오픈소스 커뮤니티
+- **영감**: 청년 고립 문제의 사회적 해결에 대한 책임감
+
+---
+
+**⭐ 이 프로젝트가 도움이 되었다면 Star를 눌러주세요!**
