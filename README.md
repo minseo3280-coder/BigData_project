@@ -1,4 +1,4 @@
-# 🎯 청년 고립·은둔 위험군 예측 모델  
+# 🎯 청년 고립·은둔 위험군 예측 모델 및 핵심 요인 분석 
 ### 머신러닝 기반 사회적 고립 조기 탐지 시스템
 
 청년의 **인구통계 정보, 생활 습관, 사회적·심리적 상태**를 기반으로  
@@ -182,7 +182,11 @@ streamlit run app.py
 ---
 ## 📎 향후 개선 방향
 
-- 시계열 데이터 확장
-- 외부 데이터(지역 환경, 사회 인프라) 결합
+- 시계열 데이터 통합
+- 지역 환경·사회 인프라 데이터 결합
 - SHAP 기반 설명 가능 AI 적용
 
+  ---
+  
+## 🎬 서비스 시연 영상
+https://private-user-images.githubusercontent.com/248983211/531126448-4ddea955-a170-46b6-88e4-1d08ede514f1.mp4?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjcxNDEzNzIsIm5iZiI6MTc2NzE0MTA3MiwicGF0aCI6Ii8yNDg5ODMyMTEvNTMxMTI2NDQ4LTRkZGVhOTU1LWExNzAtNDZiNi04OGU0LTFkMDhlZGU1MTRmMS5tcDQ_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMjMxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTIzMVQwMDMxMTJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jYzY0NDgwMmNlMjU4NWIwZGQ2ZDYzZDI5ZTIzM2E1MTk3Mzc2NWVhNWY3YmE5ZDdjZThjNWM3NTk1MDIwNWQyJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.fCbzCEzTMdwMIxGpxJUFgdA7nt48lOGX4e8NI-8i_h0
