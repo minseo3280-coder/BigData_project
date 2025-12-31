@@ -12,7 +12,7 @@
 본 프로젝트의 기획 의도, 전처리 과정, 모델링 상세 결과는 아래 PDF에서 확인하실 수 있습니다.
 
 
-👉 **[청년고립위험군_AI예측서비스_수행보고서.pdf]([[isolation-risk-ml-project/청년고립위험군_AI예측서비스_수행보고서.pdf](https://github.com/minseo3280-coder/BigData_project/blob/main/isolation-risk-ml-project/%EC%B2%AD%EB%85%84%EA%B3%A0%EB%A6%BD%EC%9C%84%ED%97%98%EA%B5%B0_AI%EC%98%88%EC%B8%A1%EC%84%9C%EB%B9%84%EC%8A%A4_%EC%88%98%ED%96%89%EB%B3%B4%EA%B3%A0%EC%84%9C.pdf)]))**
+👉 **[청년고립위험군_AI예측서비스_수행보고서.pdf]([isolation-risk-ml-project/청년고립위험군_AI예측서비스_수행보고서.pdf)])**
 
 ---
   
