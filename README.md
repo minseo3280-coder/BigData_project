@@ -165,24 +165,24 @@ https://private-user-images.githubusercontent.com/248983211/531126448-4ddea955-a
 
 ```bash
 📦 isolation-risk-ml-project
- ┣ 📜 final_complete_code.py      # 데이터 전처리 및 모델 학습
- ┣ 📜 app.py                      # Streamlit 예측 서비스
+ ┣ 📜 final_complete_code.py      # 데이터 전처리 및 모델 학습 코드
+ ┣ 📜 app.py                      # Streamlit 웹 애플리케이션 코드
  ┣ 📜 requirements.txt
- ┣ 📂 models
+ ┣ 📂 models                      # 학습된 모델 파일 (.pkl)
  ┃ ┣ random_forest_best_model.pkl
  ┃ ┣ logistic_regression_model.pkl
  ┃ ┣ standard_scaler.pkl
  ┃ ┗ feature_names.pkl
- ┣ 📂 results
+ ┣ 📂 results                     # 분석 결과 데이터 (.csv)
  ┃ ┣ 01_model_comparison_results.csv
  ┃ ┣ 02_feature_importance.csv
  ┃ ┗ 03_logistic_coefficients.csv
- ┣ 📂 figures
+ ┣ 📂 figures                     # 분석 결과 시각화 이미지 (ROC, Confusion Matrix 등)
  ┃ ┣ 01_confusion_matrix.png
  ┃ ┣ 02_roc_curve.png
  ┃ ┗ 03_feature_importance.png
  ┃ ┗ 04_a11_distribution.png
- ┗ 📜 Project_Final_Report.pdf
+ ┗ 📜 Project_Final_Report.pdf    #프로젝트 보고서 파일
 ```
 ---
 
